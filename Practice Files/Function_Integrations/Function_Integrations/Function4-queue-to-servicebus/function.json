@@ -1,0 +1,20 @@
+{
+  "scriptFile": "__init__.py",
+  "bindings": [
+    {
+      "name": "msg",
+      "type": "queueTrigger",
+      "direction": "in",
+      "queueName": "myapp-queue",
+      "connection": "functiondemo123_STORAGE"
+    },
+    {
+      "type": "serviceBus",
+      "direction": "out",
+      "connection": "azservicebusdemo_SERVICEBUS",
+      "name": "outputSbMsg",
+      "topicName": "function-demo",
+      "subscriptionName": "my-subscription"
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "IsEncrypted": false,
+  "Values": {
+    "AzureWebJobsStorage": "DefaultEndpointsProtocol=https;AccountName=functiondemo123;AccountKey=LQkeYlY08l1NS+eiaXXDFEsZAPxztmxLfmqocgBOrL7VCMnixy6PefQCbIbJmzVo3cWbUVhszdX8+AStcd4/cw==;EndpointSuffix=core.windows.net",
+    "FUNCTIONS_WORKER_RUNTIME": "python",
+    "functiondemo123_STORAGE": "DefaultEndpointsProtocol=https;AccountName=functiondemo123;AccountKey=LQkeYlY08l1NS+eiaXXDFEsZAPxztmxLfmqocgBOrL7VCMnixy6PefQCbIbJmzVo3cWbUVhszdX8+AStcd4/cw==;EndpointSuffix=core.windows.net",
+    "azservicebusdemo_SERVICEBUS": "Endpoint=sb://az-service-bus-demo.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=ffPrdP65o/6Sas8tmA4qoeAcDyAq3CAm6CY5P1OP/II=",
+    "container1_Name": "container-1"
+  }
+}

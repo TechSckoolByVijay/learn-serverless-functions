@@ -1,0 +1,19 @@
+{
+  "scriptFile": "__init__.py",
+  "bindings": [
+    {
+      "name": "myblob",
+      "type": "blobTrigger",
+      "direction": "in",
+      "path": "container-1/{name}",
+      "connection": "functiondemo123_STORAGE"
+    },
+    {
+      "type": "blob",
+      "direction": "out",
+      "name": "outputBlob",
+      "path": "container-2/{rand-guid}",
+      "connection": "functiondemo123_STORAGE"
+    }
+  ]
+}

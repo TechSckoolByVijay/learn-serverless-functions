@@ -1,0 +1,9 @@
+{
+  "IsEncrypted": false,
+  "Values": {
+    "AzureWebJobsStorage": "",
+    "FUNCTIONS_WORKER_RUNTIME": "python",
+    "transactionsasb_SERVICEBUS": "Endpoint=sb://transactions-asb.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=4ihsPHO7NhRHcV4wgUwJKi80EfdagHeFB2o1O8aVd3s=",
+    "connectionstring": "DRIVER={ODBC Driver 17 for SQL Server};SERVER=tcp:function.database.windows.net;PORT=1433;DATABASE=demo;UID=testuser;PWD=P@55word"
+  }
+}

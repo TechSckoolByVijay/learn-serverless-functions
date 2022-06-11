@@ -1,0 +1,22 @@
+# Success Message
+{
+    "UserName":"User1", 
+    "CourseID":"Course101",
+    "TransactionStatus":"SUCCESS",
+	"User_Email":"User1@domain.com"
+} 
+
+
+# Failure Message
+{
+    "UserName":"User2", 
+    "CourseID":"Course101",
+    "TransactionStatus":"FAILED",
+	"User_Email":"User2@gmail.com"
+} 
+
+# Sample Http Call
+http://localhost:7071/api/Get-TransactionStatus-Queue?UserName=Vijay&CourseID=Course101&TransactionStatus=FAILED&User_Email=VijaySainiProfessional@gmail.com
+
+# Sample Http Call
+http://localhost:7071/api/Get-TransactionStatus-Queue?UserName=Vijay&CourseID=Course101&TransactionStatus=SUCCESS&User_Email=VijaySainiProfessional@gmail.com

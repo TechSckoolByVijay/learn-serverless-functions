@@ -1,0 +1,19 @@
+{
+  "scriptFile": "__init__.py",
+  "bindings": [
+    {
+      "name": "myblob",
+      "type": "blobTrigger",
+      "direction": "in",
+      "path": "container-2/{name}",
+      "connection": "functiondemo123_STORAGE"
+    },
+    {
+      "type": "queue",
+      "direction": "out",
+      "name": "outputQueueItem",
+      "queueName": "myapp-queue",
+      "connection": "functiondemo123_STORAGE"
+    }
+  ]
+}
