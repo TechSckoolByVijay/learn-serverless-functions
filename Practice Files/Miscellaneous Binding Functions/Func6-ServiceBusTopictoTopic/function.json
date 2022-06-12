@@ -1,0 +1,22 @@
+{
+  "scriptFile": "__init__.py",
+  "entryPoint": "main",
+  "bindings": [
+    {
+      "name": "message",
+      "type": "serviceBusTrigger",
+      "direction": "in",
+      "topicName": "functest",
+      "subscriptionName": "incoming",
+      "connection": "vijaysainitest_SERVICEBUS"
+    },
+    {
+      "type": "serviceBus",
+      "direction": "out",
+      "connection": "vijaysainitest_SERVICEBUS",
+      "name": "outputSbMsg",
+      "queueName": "queueNotAvail",
+      "topicName": "functest"
+    }
+  ]
+}

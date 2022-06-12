@@ -1,0 +1,19 @@
+{
+  "scriptFile": "__init__.py",
+  "bindings": [
+    {
+      "name": "msg",
+      "type": "queueTrigger",
+      "direction": "in",
+      "queueName": "js-queue-items",
+      "connection": "demoaz900sa_STORAGE"
+    },
+    {
+      "type": "queue",
+      "direction": "out",
+      "name": "outputQueueItem",
+      "queueName": "outqueue",
+      "connection": "demoaz900sa_STORAGE"
+    }
+  ]
+}

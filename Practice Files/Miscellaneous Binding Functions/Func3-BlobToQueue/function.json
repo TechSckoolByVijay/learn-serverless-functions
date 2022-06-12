@@ -1,0 +1,19 @@
+{
+  "scriptFile": "__init__.py",
+  "bindings": [
+    {
+      "name": "myblob",
+      "type": "blobTrigger",
+      "direction": "in",
+      "path": "queueinput/{name}",
+      "connection": "demoaz900sa_STORAGE"
+    },
+    {
+      "type": "queue",
+      "direction": "out",
+      "name": "outputQueueItem",
+      "queueName": "js-queue-items",
+      "connection": "demoaz900sa_STORAGE"
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "scriptFile": "__init__.py",
+  "bindings": [
+    {
+      "name": "msg",
+      "type": "queueTrigger",
+      "direction": "in",
+      "queueName": "outqueue",
+      "connection": "demoaz900sa_STORAGE"
+    },
+    {
+      "type": "serviceBus",
+      "direction": "out",
+      "connection": "vijaysainitest_SERVICEBUS",
+      "name": "outputSbMsg",
+      "topicName": "functest",
+      "subscriptionName": "incoming"
+    }
+  ]
+}
