@@ -39,9 +39,17 @@ jobs:
           echo test, and deploy your project.
 
   build-db:
-    needs: build
+    needs: build-app
     runs-on: windows-latest
+    steps:
+            # Runs a single command using the runners shell
+      - name: Run a one-line script
+        run: echo Hello, world!
   
   package:
     needs: [build-app, build-db]
     runs-on: self-hosted
+    steps:
+            # Runs a single command using the runners shell
+      - name: Run a one-line script
+        run: echo Hello, world!
