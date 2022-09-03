@@ -2,8 +2,6 @@ name: 'Default environment variables'
 
 on:
   push:
-    branches:
-    - "dev"
 
 jobs:
   mainjob:
