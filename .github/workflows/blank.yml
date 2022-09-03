@@ -7,6 +7,7 @@ on:
   # Triggers the workflow on push or pull request events but only for the "main" branch
   push:
     branches: [ "main" ]
+
   pull_request:
     branches: [ "main" ]
 
@@ -27,6 +28,7 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
+        
 
       # Runs a single command using the runners shell
       - name: Run a one-line script
@@ -39,17 +41,12 @@ jobs:
           echo test, and deploy your project.
 
   build-db:
-    needs: build-app
+    needs: build
     runs-on: windows-latest
-    steps:
-            # Runs a single command using the runners shell
-      - name: Run a one-line script
-        run: echo Hello, world!
+    steps: 
+      - run: echo "Hello Windows"
   
   package:
     needs: [build-app, build-db]
-    runs-on: self-hosted
-    steps:
-            # Runs a single command using the runners shell
-      - name: Run a one-line script
-        run: echo Hello, world!
+    runs-on: macos-latest
+
