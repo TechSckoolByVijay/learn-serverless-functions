@@ -1,27 +1,27 @@
-name: 'Custom Env Vars'
+name: 'Default environment variables'
 
 on:
-  workflow_dispatch:
-  
-env:
-  DAY_OF_WEEK: Funday
-  testvar: value-1
+  push:
+    branches:
+    - "dev"
 
-jobs: 
+jobs:
   mainjob:
-    name: 'Show the env vars'
+    name: 'Show the Default env vars'
     runs-on: ubuntu-latest
-
-    env:
-      Greeting: Dear
-      testvar: value-2
     
     steps:
     - name: show-values-of-env-vars
       run: |
-        echo "$Greeting $First_Name. Today is $DAY_OF_WEEK!"
-        echo "testvar  ${{ env.testvar }}"
-        echo "testvar  $testvar"
-      env:
-          First_Name: Student
-          testvar: value-3
+        echo "${{ env.GITHUB_ACTION }}"
+        echo "${{ env.GITHUB_ENV }}"
+        echo "${{ env.GITHUB_API_URL }}"
+        echo "$GITHUB_API_URL"
+        echo "$GITHUB_JOB"
+        echo "$GITHUB_PATH"
+        echo "$GITHUB_STEP_SUMMARY"
+        echo "$GITHUB_WORKFLOW"
+        echo "$GITHUB_REPOSITORY_OWNER"
+        echo "$GITHUB_RUN_NUMBER"
+        echo "$GITHUB_SERVER_URL"
+        echo "$RUNNER_NAME"
