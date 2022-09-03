@@ -41,7 +41,7 @@ jobs:
           echo test, and deploy your project.
 
   build-db:
-    needs: build
+    needs: build-app
     runs-on: windows-latest
     steps: 
       - run: echo "Hello Windows"
@@ -49,4 +49,6 @@ jobs:
   package:
     needs: [build-app, build-db]
     runs-on: macos-latest
+    steps: 
+      - run: echo "Hello Windows"
 
