@@ -9,7 +9,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: env
-      - run: github
 
   windows-environment-variables:
     runs-on: windows-latest
