@@ -40,6 +40,11 @@ jobs:
           echo Add other actions to build,
           echo test, and deploy your project.
 
+  build-api:
+    runs-on: windows-latest
+    steps: 
+      - run: echo "Hello Windows"
+      
   build-db:
     needs: build-app
     runs-on: windows-latest
