@@ -19,5 +19,6 @@ jobs:
             AZURE_CREDENTIALS: ${{ secrets.AZURE_CREDENTIALS }}
             
       - name: "A task"
+        uses: 'actions/checkout@v3'
         with:
             AZURE_CREDENTIALS: ${{ secrets.AZURE_CREDENTIALS }}
