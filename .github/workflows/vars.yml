@@ -6,19 +6,15 @@ on:
 jobs:
   deployment:
     runs-on: ubuntu-latest
-    steps:
-      - name: deploy
-        run: echo "Depoloying to production envt"
-      - run: |
+    steps:  
+      - name: Print Secret
+        run: |
             echo "sec1: ${{ secrets.AZURE_CREDENTIALS  }}"
             echo "sec2: ${{ secrets.cder  }}"
             
-      - run: |
+      - name: Print Secret as an environment variable
+        run: |
             echo "sec1: $AZURE_CREDENTIALS"
         env:
             AZURE_CREDENTIALS: ${{ secrets.AZURE_CREDENTIALS }}
-            
-      - name: "A task"
-        uses: 'actions/checkout@v3'
-        with:
-            AZURE_CREDENTIALS: ${{ secrets.AZURE_CREDENTIALS }}
+
