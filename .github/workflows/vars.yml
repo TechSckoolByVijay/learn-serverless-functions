@@ -9,7 +9,6 @@ jobs:
     steps:
       - name: deploy
         run: echo "Depoloying to production envt"
-      
       - run: |
             echo "sec1: ${{ secrets.AZURE_CREDENTIALS  }}"
             echo "sec2: ${{ secrets.cder  }}"
