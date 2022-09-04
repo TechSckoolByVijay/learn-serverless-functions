@@ -1,25 +1,16 @@
-name: 'Default environment variables'
+name: GitHub Secrets
 
 on:
-  push:
-
-jobs:
-  mainjob:
-    name: 'Show the Default env vars'
-    runs-on: ubuntu-latest
+  workflow_dispatch:
     
+jobs:
+  deployment:
+    runs-on: ubuntu-latest
     steps:
-    - name: show-values-of-env-vars
-      run: |
-        echo "${{ env.GITHUB_ACTION }}"
-        echo "${{ env.GITHUB_ENV }}"
-        echo "${{ env.GITHUB_API_URL }}"
-        echo "$GITHUB_API_URL"
-        echo "$GITHUB_JOB"
-        echo "$GITHUB_PATH"
-        echo "$GITHUB_STEP_SUMMARY"
-        echo "$GITHUB_WORKFLOW"
-        echo "$GITHUB_REPOSITORY_OWNER"
-        echo "$GITHUB_RUN_NUMBER"
-        echo "$GITHUB_SERVER_URL"
-        echo "$RUNNER_NAME"
+      - name: deploy
+        run: echo "Depoloying to production envt"
+      
+      - run: |
+            echo "sec1: ${{ secrets.AZURE_CREDENTIALS  }}"
+            echo "sec2: ${{ secrets.cder  }}"
+			
