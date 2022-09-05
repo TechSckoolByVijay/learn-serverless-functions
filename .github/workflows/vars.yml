@@ -1,20 +1,16 @@
-name: GitHub Secrets
+name: Test PowerShell on Ubuntu
+on: push
 
-on:
-  workflow_dispatch:
-    
 jobs:
-  deployment:
+  pester-test:
+    name: Pester test
     runs-on: ubuntu-latest
-    steps:  
-      - name: Print Secret
+    steps:
+      - name: Check out repository code
+        uses: actions/checkout@v3
+      - name: Perform a Pester test from the command-line
+        shell: pwsh
         run: |
-            echo "MY_TOP_SECRET: ${{ secrets.MY_TOP_SECRET  }}"
-            echo "i_dont_exist: ${{ secrets.i_dont_exist  }}"
-            
-      - name: Print Secret as an environment variable
-        run: |
-            echo "MY_TOP_SECRET: $MY_TOP_SECRET"
-        env:
-            AZURE_CREDENTIALS: ${{ secrets.MY_TOP_SECRET }}
-
+            Test-Path resultsfile.log
+            Get-Process 
+            "Vijay Shankar Saini".Split(' ')[0]
