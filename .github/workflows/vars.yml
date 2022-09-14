@@ -2,15 +2,32 @@ name: Test PowerShell on Ubuntu
 on: push
 
 jobs:
-  pester-test:
-    name: Pester test
+  ubuntu-test:
     runs-on: ubuntu-latest
     steps:
       - name: Check out repository code
         uses: actions/checkout@v3
-      - name: Perform a Pester test from the command-line
+      - name: pwsh
         shell: pwsh
-        run: |
-            Test-Path resultsfile.log
-            Get-Process 
-            "Vijay Shankar Saini".Split(' ')[0]
+        run: echo "Pwsh is working"
+      - name: python
+        shell: python
+        run: print("Python is working")
+      - name: bash
+        shell: bash
+        run: echo "bash is working"
+
+  windows-test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository code
+        uses: actions/checkout@v3
+      - name: pwsh
+        shell: pwsh
+        run: echo "Pwsh is working"
+      - name: python
+        shell: python
+        run: print("Python is working")
+      - name: bash
+        shell: bash
+        run: echo "bash is working"
