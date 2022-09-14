@@ -35,8 +35,6 @@ jobs:
   selfhosted-test:
     runs-on: [self-hosted, Windows, X64]
     steps:
-      - name: Check out repository code
-        uses: actions/checkout@v3
       - name: pwsh
         shell: pwsh
         run: echo "Pwsh is working"
