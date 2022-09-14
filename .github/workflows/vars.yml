@@ -31,3 +31,18 @@ jobs:
       - name: bash
         shell: bash
         run: echo "bash is working"
+
+  selfhosted-test:
+    runs-on: [self-hosted, Windows, X64]
+    steps:
+      - name: Check out repository code
+        uses: actions/checkout@v3
+      - name: pwsh
+        shell: pwsh
+        run: echo "Pwsh is working"
+      - name: python
+        shell: python
+        run: print("Python is working")
+      - name: bash
+        shell: bash
+        run: echo "bash is working"
