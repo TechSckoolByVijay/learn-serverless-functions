@@ -37,10 +37,17 @@ jobs:
     steps:
       - name: pwsh
         shell: pwsh
+        continue-on-error: true
         run: echo "Pwsh is working"
       - name: python
+        continue-on-error: true
         shell: python
         run: print("Python is working")
       - name: bash
+        continue-on-error: true
         shell: bash
+        run: echo "bash is working"
+      - name: cmd
+        continue-on-error: true
+        shell: cmd
         run: echo "bash is working"
