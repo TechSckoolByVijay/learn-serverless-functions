@@ -35,9 +35,9 @@ jobs:
   selfhosted-test:
     runs-on: [self-hosted, Windows, X64]
     steps:
-      - uses: actions/setup-python@v4
-        with:
-          python-version: '3.9'
+      #- uses: actions/setup-python@v4
+      #  with:
+      #    python-version: '3.9'
       - name: pwsh
         shell: pwsh
         continue-on-error: true
