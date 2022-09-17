@@ -9,10 +9,10 @@ jobs:
         uses: actions/checkout@v3
       - name: pwsh
         shell: pwsh
-        run: print("Python is working") 
+        run: echo "Pwsh is working" 
       - name: python
         shell: python
-        run: echo "Pwsh is working"
+        run: echo "Python is working"
       - name: bash
         shell: bash
         run: echo "bash is working"
