@@ -12,7 +12,7 @@ jobs:
         run: echo "Pwsh is working" 
       - name: python
         shell: python
-        run: echo "Python is working"
+        run: print("Python is working")
       - name: bash
         shell: bash
         run: echo "bash is working"
@@ -35,6 +35,9 @@ jobs:
   selfhosted-test:
     runs-on: [self-hosted, Windows, X64]
     steps:
+      - uses: actions/setup-python@v4
+        with:
+          python-version: '3.10' 
       - name: pwsh
         shell: pwsh
         continue-on-error: true
@@ -50,4 +53,4 @@ jobs:
       - name: cmd
         continue-on-error: true
         shell: cmd
-        run: echo "bash is working"
+        run: echo "bash is working by default"
